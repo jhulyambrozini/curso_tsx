@@ -1,5 +1,5 @@
-import Sidenav from './components/Sidenav'
-import Header from './components/Header'
+import Sidenav from './components/SideNav/Sidenav.tsx'
+import Header from './components/Header/Header.tsx'
 import Resume from './pages/Resume'
 
 import './style.ts'
@@ -10,11 +10,13 @@ function App() {
   return (
     <DataContextProvider>
       <GlobalStyle />
+      <div className='container'>
         <Sidenav />
         <main>
           <Header />
           <Resume />
         </main>
+      </div>
     </DataContextProvider>
   )
 }
