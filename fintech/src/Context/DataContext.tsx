@@ -29,7 +29,7 @@ export const useData = () => {
     return context
 }
 
-function getDateAgo(n: number) {
+const getDateAgo = (n: number) => {
     const date = new Date()
     date.setDate(date.getDate() - n)
     const day = String(date.getDate()).padStart(2, '0')
