@@ -17,14 +17,14 @@ const Sidenav = () => {
         <span>
           <img src={resumeIcon} alt="Icone de casa" />
         </span>
-        <NavLink to='/' title='Cique aqui para ir para página de resumo'>Resumo</NavLink>
+        <NavLink className='navLink' to='/' title='Cique aqui para ir para página de resumo'>Resumo</NavLink>
       </li>
 
       <li>
         <span>
           <img src={salesIcon} alt="Icone de loja" />
         </span>
-        <NavLink to='/sales'  title='Cique aqui para ir para página de vendas'>Vendas</NavLink>
+        <NavLink className='navLink' to='/sales'  title='Cique aqui para ir para página de vendas'>Vendas</NavLink>
       </li>
 
       <li>

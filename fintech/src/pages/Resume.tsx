@@ -1,4 +1,5 @@
 import { useData } from "../Context/DataContext"
+import GraphicsSales from "../components/GraphicsSales/GraphicsSales"
 
 const Resume = () => {
   const {data} = useData()
@@ -42,7 +43,9 @@ const Resume = () => {
         </span>
       </div>
     </div>
-    <div className="box mb">graficos</div>
+    <div className="box mb">
+      <GraphicsSales data={data} />
+    </div>
   </section>
 }
 

@@ -94,6 +94,38 @@ const GlobalStyle = createGlobalStyle`
         list-style: none;
         padding: 0;
     }
+
+    @media (max-width: 1000px) {
+        .resumo {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 700px) {
+        html {
+            --gap-s: 0.5rem;
+            --gap: 0.75rem;
+        }
+        .container {
+            grid-template-columns: 1fr;
+        }
+        .flex {
+            flex-direction: column;
+        }
+        .sidenav ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .sidenav li a {
+            font-size: 0.875rem;
+        }
+        .venda {
+            grid-template-columns: 1fr;
+        }
+        .venda div:last-child {
+            justify-self: start;
+        }
+}
 `
 
 export default GlobalStyle

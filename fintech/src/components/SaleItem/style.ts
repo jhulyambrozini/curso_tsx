@@ -16,4 +16,12 @@ export const SaleDiv = styled.div`
         text-decoration: none;
         color: inherit;
     }
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+
+        .sale-price {
+            justify-self: start;
+        }
+    }
 `
