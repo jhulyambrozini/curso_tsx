@@ -65,6 +65,7 @@ const GlobalStyle = createGlobalStyle`
         display: grid;
         padding: ${gaps.gapDefault};
         gap: ${gaps.gapDefault};
+        grid-template-columns: 240px auto;
     }
 
     .resume {
@@ -91,6 +92,7 @@ const GlobalStyle = createGlobalStyle`
 
     ul {
         list-style: none;
+        padding: 0;
     }
 `
 
