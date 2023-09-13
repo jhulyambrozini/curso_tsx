@@ -2,10 +2,10 @@ import { createGlobalStyle } from "styled-components"
 
 export const colors = {
     color1: '#463220',
-    color2: '#665963c',
+    color2: '#66593c',
     color3: '#eceadd',
     color4: '#f7f8f5',
-    color5: '#fff',
+    color5: '#ffffff',
 }
 
 export const gaps = {
@@ -65,6 +65,17 @@ const GlobalStyle = createGlobalStyle`
         display: grid;
         padding: ${gaps.gapDefault};
         gap: ${gaps.gapDefault};
+    }
+
+    .resume {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .resume h2 {
+        font-size: 1.5rem;
+        margin-bottom: ${gaps.gapDefault};
+        color: ${colors.color1};
     }
 
     button {

@@ -1,20 +1,10 @@
 import { createContext, Dispatch, PropsWithChildren, SetStateAction, useContext, useState } from "react";
 import useFetch from "../hooks/useFetch";
 
-type Vendas = {
-    id: string
-    nome: string
-    preco: number
-    status: 'pago' | 'processando' | 'falha'
-    pagamento: 'boleto' | 'pix' | 'cartao'
-    data: string
-    parcelas: number | null
-}
-
 type IDataContext = {
     loading: boolean
     error: string | null
-    data: Vendas[] | null
+    data: Sales[] | null
     initial: string
     final: string
     setInitial: Dispatch<SetStateAction<string>>
@@ -43,7 +33,7 @@ export const DataContextProvider = ({children}: PropsWithChildren) => {
     const [initial, setInitial] = useState(getDateAgo(30))
     const [final, setFinal] = useState(getDateAgo(0))
     
-    const {data, loading, error} = useFetch<Vendas[]>(`https://data.origamid.dev/vendas/?inicio=${initial}&final=${final}`)
+    const {data, loading, error} = useFetch<Sales[]>(`https://data.origamid.dev/vendas/?inicio=${initial}&final=${final}`)
 
     return <DataContext.Provider value={{data, loading, error, initial, setInitial, final, setFinal}}>{children}</DataContext.Provider>
 }

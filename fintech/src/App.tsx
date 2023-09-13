@@ -5,6 +5,7 @@ import Resume from './pages/Resume'
 import './style.ts'
 import GlobalStyle from './style.ts'
 import { DataContextProvider } from './Context/DataContext.tsx'
+import Sales from './pages/Sales.tsx'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <main>
           <Header />
           <Resume />
+          <Sales />
         </main>
       </div>
     </DataContextProvider>
